@@ -1,0 +1,15 @@
+clean:
+  input: data/raw
+  output: data/clean
+  size: 640
+  blur_threshold: 100.0
+  min_brightness: 20.0
+  max_brightness: 235.0
+
+split:
+  input: data/clean
+  output: data/dataset
+  train: 0.75
+  val: 0.15
+  test: 0.10
+  seed: 42

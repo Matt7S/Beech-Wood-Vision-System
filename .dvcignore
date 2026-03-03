@@ -1,0 +1,5 @@
+# DVC ignore file – patterns listed here are excluded from DVC tracking.
+# (Analogous to .gitignore for the DVC cache.)
+
+# Placeholder files used to keep empty directories in Git
+**/.gitkeep

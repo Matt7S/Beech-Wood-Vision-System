@@ -1,0 +1,37 @@
+# Ignore actual image/label data files – managed by DVC instead.
+# Only .gitkeep and DVC pointer files (*.dvc) are tracked by Git.
+
+# Raw images
+raw/**/*.jpg
+raw/**/*.jpeg
+raw/**/*.png
+raw/**/*.bmp
+raw/**/*.tiff
+raw/**/*.tif
+
+# Cleaned images
+clean/**/*.jpg
+clean/**/*.jpeg
+clean/**/*.png
+clean/**/*.bmp
+clean/**/*.tiff
+clean/**/*.tif
+
+# Labeled images & annotation exports
+labeled/**/*.jpg
+labeled/**/*.jpeg
+labeled/**/*.png
+labeled/**/*.bmp
+labeled/**/*.tiff
+labeled/**/*.tif
+labeled/**/*.xml
+labeled/**/*.json
+
+# Split dataset images and labels
+dataset/**/*.jpg
+dataset/**/*.jpeg
+dataset/**/*.png
+dataset/**/*.bmp
+dataset/**/*.tiff
+dataset/**/*.tif
+dataset/**/*.txt

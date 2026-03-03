@@ -1,0 +1,42 @@
+vars:
+  - params.yaml
+
+stages:
+  clean:
+    cmd: >-
+      python src/preprocessing/data_cleaning.py
+      --input            ${clean.input}
+      --output           ${clean.output}
+      --size             ${clean.size}
+      --blur-threshold   ${clean.blur_threshold}
+      --min-brightness   ${clean.min_brightness}
+      --max-brightness   ${clean.max_brightness}
+    deps:
+      - src/preprocessing/data_cleaning.py
+      - ${clean.input}
+    params:
+      - clean.blur_threshold
+      - clean.min_brightness
+      - clean.max_brightness
+    outs:
+      - ${clean.output}
+
+  split:
+    cmd: >-
+      python src/data/split_dataset.py
+      --input  ${split.input}
+      --output ${split.output}
+      --train  ${split.train}
+      --val    ${split.val}
+      --test   ${split.test}
+      --seed   ${split.seed}
+    deps:
+      - src/data/split_dataset.py
+      - ${split.input}
+    params:
+      - split.train
+      - split.val
+      - split.test
+      - split.seed
+    outs:
+      - ${split.output}
