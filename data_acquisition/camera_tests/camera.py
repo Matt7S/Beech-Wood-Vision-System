@@ -7,7 +7,7 @@ cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
 cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc(*'MJPG'))
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 800)
-cap.set(cv2.CAP_PROP_FPS, 120)
+cap.set(cv2.CAP_PROP_FPS, 30)
 
 # Jasność (Brightness): -64 do 64 (lub 0-255). Podnosi ogólny poziom czerni.
 cap.set(cv2.CAP_PROP_BRIGHTNESS, 0)
